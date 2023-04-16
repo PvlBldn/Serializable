@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
-        binding.bIncrement.setOnClickListener {  }
-        binding.bSwitch.setOnClickListener {  }
-        binding.bRandom.setOnClickListener {  }
+        binding.bIncrement.setOnClickListener { increment() }
+        binding.bSwitch.setOnClickListener { switchVisibility() }
+        binding.bRandom.setOnClickListener { setRandomColor() }
 
         state = if (savedInstanceState == null) {
             State(
